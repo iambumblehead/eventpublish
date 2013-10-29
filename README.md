@@ -6,7 +6,11 @@ eventpublish
 
 An object through which callbacks may be added and called through publish/subscribe model.
 
-It associates events strings rather than named properties, for example `'EventMaximize'` rather than `Event.Maximize`.
+It associates events strings rather than named properties, for example `'EventMaximize'` rather than `Event.Maximize`. For event publishing
+with named properties, see [eventhook][1].
+
+[0]: http://www.bumblehead.com                            "bumblehead"
+[1]: https://github.com/iambumblehead/eventhook            "eventhook"
 
 ---------------------------------------------------------
 #### <a id="install"></a>Install:
@@ -43,24 +47,24 @@ Create a function before starting.
 var myfun = function (o) { console.log('help ' + o); }
 ```
 
-1. Add a functions with an associated event name.
+ 1. **Add functions** with an associated event name.
 
-```javascript
-eventpublish.add('newevent', myfun);
-```
+ > ```javascript
+   eventpublish.add('newevent', myfun);
+   ```
 
-2. Call all functions assocated with event and pass parameters to them.
+ 2. **Call functions** assocated with event, pass parameters to them.
 
-```javascript
-eventpublish.fire('newevent', 'me!'); // help me!
-```
+ > ```javascript
+   eventpublish.fire('newevent', 'me!'); // help me!
+   ```
 
-2. Remove functions from object.
+ 3. **Remove functions**.
 
-```javascript
-eventpublish.rm('newevent', myfun);
-eventpublish.fire('newevent'); // [nothing happens]
-```
+ > ```javascript
+   eventpublish.rm('newevent', myfun);
+   eventpublish.fire('newevent'); // [nothing happens]
+   ```
 
 ---------------------------------------------------------
 #### <a id="license">License:
