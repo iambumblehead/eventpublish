@@ -69,6 +69,8 @@ var myfun = function (o) { console.log('help ' + o); }
 ---------------------------------------------------------
 #### <a id="license">License:
 
+ ![scrounge](http://github.com/iambumblehead/scroungejs/raw/master/img/hand.png) 
+
 (The MIT License)
 
 Copyright (c) 2013 [Bumblehead][0] <chris@bumblehead.com>
